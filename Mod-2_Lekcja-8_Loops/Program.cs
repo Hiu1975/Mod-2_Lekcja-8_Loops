@@ -42,7 +42,7 @@ bool isPrimeNumber(int number)
 {
     for (int i = 2; i < number; i++)
     {
-        if (num1 % i == 0)
+        if (number % i == 0)
         {
             return (false);
         }
