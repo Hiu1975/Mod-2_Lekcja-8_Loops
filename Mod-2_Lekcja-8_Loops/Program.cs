@@ -93,17 +93,6 @@ for (int i = 0; i < sequenceFibonacci.Length; i++)
     Console.WriteLine($"F({i+1}) = {sequenceFibonacci[i]}");
 }
 
-Console.WriteLine("zadanie nr. 3 Napisz program, który zaimplementuje ciąg Fibonacciego i wyświetli go na ekranie.");
-int LiczbaA = 1;
-int LiczbaB = 0;
-int LiczbaC = 0;
-while (LiczbaA < 100000000)
-{
-    LiczbaC = LiczbaA + LiczbaB;
-    Console.WriteLine($"{LiczbaC}");
-    LiczbaA = LiczbaB; LiczbaB = LiczbaC;
-}
-
 // Zadanie 4
 
 {
