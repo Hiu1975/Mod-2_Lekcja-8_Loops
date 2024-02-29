@@ -36,7 +36,8 @@ for (int i = 2; i <= userNumber; i++)
 Console.WriteLine($"Quantity of Primes numbers in range 0-{userNumber} is: {counter}");
 Console.WriteLine();
 
-/* Zadanie2 ver.2
+// Zadanie2 ver.2
+
 bool isPrimeNumber(int number)
 {
     for (int i = 2; i < number; i++)
@@ -60,9 +61,9 @@ for (int i = 3; i <= numUser; i += 2)
     }
 }
 Console.WriteLine($"W zakresie 0-{numUser} is: {counterPN - 1} Primes Number");
-*/
+
 // Zadanie 2
-/*
+
 int oddEven = 1;
 
 do
@@ -73,9 +74,9 @@ do
     }
     oddEven++;
 } while (oddEven < 1000);
-*/
+
 //Zadanie 3
-/*
+
 Console.Write("How many first elements of Fibonacci Sequence do you want to display ? ");
 
 int.TryParse(Console.ReadLine(), out int elementsFS);
@@ -102,8 +103,9 @@ while (LiczbaA < 100000000)
     Console.WriteLine($"{LiczbaC}");
     LiczbaA = LiczbaB; LiczbaB = LiczbaC;
 }
-*/
-/*for (int m = 1; m < 5; m++)
+
+// Zadanie 4
+
 {
     int.TryParse(Console.ReadLine(), out int numFromUser);
     int numToPrint = 1;  
@@ -123,4 +125,3 @@ while (LiczbaA < 100000000)
         Console.WriteLine();
     }
 }
-*/
