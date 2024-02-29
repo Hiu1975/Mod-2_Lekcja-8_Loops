@@ -51,7 +51,7 @@ bool isPrimeNumber(int number)
 }
 Console.Write("Upper range of Prime Numbers: ");
 int counterPN = 1;
-int numUser = Convert.ToInt32(Console.ReadLine());
+int.TryParse(Console.ReadLine(), out int numUser);
 for (int i = 3; i <= numUser; i += 2)
 {
     if (isPrimeNumber(i) == true)
