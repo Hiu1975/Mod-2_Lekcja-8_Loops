@@ -37,7 +37,7 @@ Console.WriteLine($"Quantity of Primes numbers in range 0-{userNumber} is: {coun
 Console.WriteLine();
 
 // Zadanie1 ver.2
-/*
+
 bool isPrimeNumber(int number)
 {
     for (int i = 2; i < number; i++)
@@ -60,8 +60,8 @@ for (int i = 3; i <= numUser; i += 2)
         // Console.WriteLine(i);
     }
 }
-Console.WriteLine($"W zakresie 0-{numUser} is: {counterPN - 1} Primes Number");
-*/
+Console.WriteLine($"W zakresie 0-{numUser} is: {counterPN} Primes Number");
+
 // Zadanie 2
 
 int oddEven = 1;
