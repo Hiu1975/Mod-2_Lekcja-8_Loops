@@ -4,31 +4,31 @@ using System.Text;
 
 bool isPrimeNumber(int number)
 {
-   for (int i = 2; i < number; i++)
-   {
-       if (number % i == 0)
-       {
-           return (false);
-       }
-   }
-   return (true);
+    for (int i = 2; i < number; i++)
+    {
+        if (number % i == 0)
+        {
+            return (false);
+        }
+    }
+    return (true);
 }
 Console.Write("Enter the upper range of Prime Numbers: ");
 int.TryParse(Console.ReadLine(), out int numUser);
 int counterPN = 1;
 for (int i = 3; i <= numUser; i += 2)
 {
-   if (isPrimeNumber(i) == true)
-   {
-       counterPN++;
-   }
+    if (isPrimeNumber(i) == true)
+    {
+        counterPN++;
+    }
 }
 Console.WriteLine($"W zakresie 0-{numUser} is: {counterPN} Primes Numbers");
 
 // Zadanie1 ver.2
 
 Console.WriteLine();
-Console.WriteLine("Enter the upper limit of the range of the set of Prime Numbers");
+Console.WriteLine("Enter the upper limit of the range of the set of Prime Numbers (>=10000)");
 int.TryParse(Console.ReadLine(), out int userNumber);
 List<int> listToDivede = new List<int>();
 listToDivede.AddRange(new List<int>() {
@@ -45,20 +45,20 @@ int divisorsNumber = 0;
 int counter = 168;
 for (int i = 2; i <= userNumber; i++)
 {
-   foreach (int item in listToDivede)
-   {
-       if (i % item == 0)
-       {
-           divisorsNumber++;
-       }
-   }
-   if (divisorsNumber == 0)
-   {
-       counter++;
-       //Console.Write($"{i} ");
+    foreach (int item in listToDivede)
+    {
+        if (i % item == 0)
+        {
+            divisorsNumber++;
+        }
+    }
+    if (divisorsNumber == 0)
+    {
+        counter++;
+        //Console.Write($"{i} ");
 
-   }
-   divisorsNumber = 0;
+    }
+    divisorsNumber = 0;
 }
 
 Console.WriteLine($"Quantity of Primes numbers in range 0-{userNumber} is: {counter}");
@@ -70,11 +70,11 @@ int oddEven = 1;
 
 do
 {
-   if (oddEven % 2 == 0)
-   {
-       Console.WriteLine(oddEven); 
-   }
-   oddEven++;
+    if (oddEven % 2 == 0)
+    {
+        Console.WriteLine(oddEven);
+    }
+    oddEven++;
 } while (oddEven < 1000);
 
 //Zadanie 3
@@ -86,66 +86,61 @@ int[] sequenceFibonacci = new int[elementsFS];
 
 for (int i = 2; i < elementsFS; i++)
 {
-   sequenceFibonacci[0] = 1;
-   sequenceFibonacci[1] = 1;
-   sequenceFibonacci[i] = sequenceFibonacci[i - 2] + sequenceFibonacci[i - 1];
+    sequenceFibonacci[0] = 1;
+    sequenceFibonacci[1] = 1;
+    sequenceFibonacci[i] = sequenceFibonacci[i - 2] + sequenceFibonacci[i - 1];
 }
 for (int i = 0; i < sequenceFibonacci.Length; i++)
 {
-   Console.WriteLine($"F({i+1}) = {sequenceFibonacci[i]}");
+    Console.WriteLine($"F({i + 1}) = {sequenceFibonacci[i]}");
 }
 
 // Zadanie 4
 
 {
-Console.WriteLine();
-Console.WriteLine("Enter random integer number.");
-int.TryParse(Console.ReadLine(), out int numFromUser);
-int numToPrint = 1;  
-int columnCounter = 1;
-while (numToPrint <= numFromUser)
-{
-    for (int i = 1; i <= columnCounter; i++)
-    {
-        Console.Write($"{numToPrint} ");
-        numToPrint++;
-        if (numToPrint > numFromUser) 
-        {
-            break;
-        }
-    }
-    columnCounter++;
     Console.WriteLine();
-   }
+    Console.WriteLine("Enter random integer number.");
+    int.TryParse(Console.ReadLine(), out int numFromUser);
+    int numToPrint = 1;
+    int columnCounter = 1;
+    while (numToPrint <= numFromUser)
+    {
+        for (int i = 1; i <= columnCounter; i++)
+        {
+            Console.Write($"{numToPrint} ");
+            numToPrint++;
+            if (numToPrint > numFromUser)
+            {
+                break;
+            }
+        }
+        columnCounter++;
+        Console.WriteLine();
+    }
 }
 
 //zadanie 5
 
 Console.WriteLine();
 Console.WriteLine("Algorithm display 3rd power of numbers from 1 to 20.");
-for (int i = 1; i<=20;  i++)
+for (int i = 1; i <= 20; i++)
 {
     double result = Math.Pow(i, 3);
     Console.WriteLine($"{i}^3= {result}");
 }
 
-
 //zadanie 6
 
 Console.WriteLine();
-Console.WriteLine("Program calculate and display sum of numbers 1-20 like 1 + 1/2 + 1/3 +...+ 1/20 ");
+Console.WriteLine("Program calculate and display sum of numbers 1-20 like 1 + 1/2 + 1/3 +... ");
 double sumOfSequence = 0;
-for (int i = 1; i < 20; i++)
+for (int i = 1; i <= 20; i++)
 {
     sumOfSequence += 1.0 / i;
 }
 Console.WriteLine(Math.Round(sumOfSequence, 2));
 
-
 //zadanie 7
-
-
-
 
 {
     Console.WriteLine();
