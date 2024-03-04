@@ -59,7 +59,6 @@ for (int i = 3; i <= numUser; i += 2)
    if (isPrimeNumber(i) == true)
    {
        counterPN++;
-       // Console.WriteLine(i);
    }
 }
 Console.WriteLine($"W zakresie 0-{numUser} is: {counterPN} Primes Number");
@@ -214,3 +213,24 @@ while (numDecimal > 0)
 Console.WriteLine(numBinary);
 
 //zadanie 10
+
+Console.WriteLine();
+Console.WriteLine("Program finding Least Common Multiple (LCM) of 2 integers numbers.");
+
+int GCD(int first, int second)  //GCD Greatest Common Divisor
+{
+    int auxNum;
+    while (second != 0)
+    {
+        auxNum = first % second;
+        first = second;
+        second = auxNum;
+
+    }
+    return first;
+}
+
+int.TryParse(Console.ReadLine(), out int firstNum);
+int.TryParse(Console.ReadLine(), out int secondNum);
+Console.WriteLine($"GCD={GCD(firstNum, secondNum)}");
+Console.WriteLine($"LCM={firstNum * secondNum / GCD(firstNum, secondNum)}");
