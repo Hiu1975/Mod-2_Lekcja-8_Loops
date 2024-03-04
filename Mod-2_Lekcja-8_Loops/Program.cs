@@ -2,7 +2,33 @@ using System.Text;
 
 // Zadanie 1
 
-Console.WriteLine("Give the upper limit of the range of the set of prime numbers");
+bool isPrimeNumber(int number)
+{
+   for (int i = 2; i < number; i++)
+   {
+       if (number % i == 0)
+       {
+           return (false);
+       }
+   }
+   return (true);
+}
+Console.Write("Enter the upper range of Prime Numbers: ");
+int.TryParse(Console.ReadLine(), out int numUser);
+int counterPN = 1;
+for (int i = 3; i <= numUser; i += 2)
+{
+   if (isPrimeNumber(i) == true)
+   {
+       counterPN++;
+   }
+}
+Console.WriteLine($"W zakresie 0-{numUser} is: {counterPN} Primes Numbers");
+
+// Zadanie1 ver.2
+
+Console.WriteLine();
+Console.WriteLine("Enter the upper limit of the range of the set of Prime Numbers");
 int.TryParse(Console.ReadLine(), out int userNumber);
 List<int> listToDivede = new List<int>();
 listToDivede.AddRange(new List<int>() {
@@ -37,31 +63,6 @@ for (int i = 2; i <= userNumber; i++)
 
 Console.WriteLine($"Quantity of Primes numbers in range 0-{userNumber} is: {counter}");
 Console.WriteLine();
-
-// Zadanie1 ver.2
-
-bool isPrimeNumber(int number)
-{
-   for (int i = 2; i < number; i++)
-   {
-       if (number % i == 0)
-       {
-           return (false);
-       }
-   }
-   return (true);
-}
-Console.Write("Upper range of Prime Numbers: ");
-int counterPN = 1;
-int.TryParse(Console.ReadLine(), out int numUser);
-for (int i = 3; i <= numUser; i += 2)
-{
-   if (isPrimeNumber(i) == true)
-   {
-       counterPN++;
-   }
-}
-Console.WriteLine($"W zakresie 0-{numUser} is: {counterPN} Primes Number");
 
 // Zadanie 2
 
