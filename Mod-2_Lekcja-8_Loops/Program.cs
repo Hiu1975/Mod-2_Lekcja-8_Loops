@@ -153,7 +153,7 @@ Console.WriteLine(Math.Round(sumOfSequence, 2));
     int.TryParse(Console.ReadLine(), out int diagonal);
     if (diagonal % 2 == 0)
     {
-        Console.WriteLine("You entered an odd number, in the case of even numbers it is impossible to draw a diamond that meets the conditions imposed in the task.");
+        Console.WriteLine("You entered an even number, in the case of even numbers it is impossible to draw a diamond that meets the conditions imposed in the task.");
     }
     else
     {
