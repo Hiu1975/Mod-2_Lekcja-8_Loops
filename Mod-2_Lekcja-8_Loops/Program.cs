@@ -6,7 +6,7 @@ List<int> listToDivede = new List<int>();
 listToDivede.AddRange(new List<int>() {
   2,  3,  5,  7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71,
  73, 79, 83, 89, 97});
-int primeNumber = 0;
+int divisorsNumber = 0;
 int counter = 25;
 for (int i = 2; i <= userNumber; i++)
 {
@@ -14,16 +14,16 @@ for (int i = 2; i <= userNumber; i++)
    {
        if (i % item == 0)
        {
-           primeNumber++;
+           divisorsNumber++;
        }
    }
-   if (primeNumber == 0)
+   if (divisorsNumber == 0)
    {
        counter++;
        //Console.Write($"{i} ");
 
    }
-   primeNumber = 0;
+   divisorsNumber = 0;
 }
 
 Console.WriteLine($"Quantity of Primes numbers in range 0-{userNumber} is: {counter}");
